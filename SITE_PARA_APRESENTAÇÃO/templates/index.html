@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jovens e os Desafios da Tecnologia
+{% endblock %}
+
+{% block sidebar %}
+<a href="{{ url_for('conceito') }}"><i class="icon">📚</i> Conceito de Tecnologia</a>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+<!-- Outros itens do menu podem ser adicionados aqui -->
+{% endblock %}
+
+{% block content %}
+<main class="home-background container mt-5">
+    <!-- Conteúdo da página inicial -->
+</main>
+
+{% endblock %}

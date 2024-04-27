@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+O Que a Bíblia Diz?
+{% endblock %}
+
+{% block content %}
+<div id="biblicalCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item">
+            <div class="carousel-caption">
+                <h5>A tecnologia contra Deus!</h5>
+                <h5>Gênesis 11:6</h5>
+                <h3>"Disse então o Senhor: 'Eis que o povo é um só e todos têm a mesma linguagem. Isto é apenas o começo de suas realizações; agora não haverá restrição para tudo o que planejarem fazer.'"</h3>
+            </div>
+        </div>
+        <div class="carousel-item active">
+            <div class="carousel-caption">
+                <h5>A tecnologia a favor de Deus!</h5>
+                <h5>Êxodo 31:1-5</h5>
+                <h4>"Disse ainda o Senhor a Moisés: 'Vê, chamei pelo nome a Bezalel, filho de Uri, filho de Hur, da tribo de Judá. Enchi-o do Espírito de Deus, de habilidade, de inteligência e de conhecimento em todo tipo de artesanato, para fazer desenhos e trabalhar em ouro, em prata e em bronze, para cortar e engastar pedras, para trabalhar em madeira e para exercer todo tipo de artesanato.'"</h4>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#biblicalCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#biblicalCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<h3 class="biblical-quote">Mateus 24:12: "E, por se multiplicar a iniquidade, o amor de muitos esfriará."</h3>
+
+<h3 class="biblical-quote">Daniel 12:4: "E tu, Daniel, fecha estas palavras e sela este livro, até ao fim do tempo; muitos correrão de uma parte para outra, e o conhecimento se multiplicará."</h3>
+{% endblock %}

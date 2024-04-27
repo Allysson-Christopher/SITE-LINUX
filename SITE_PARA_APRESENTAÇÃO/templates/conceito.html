@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+Conceito de Tecnologia
+{% endblock %}
+
+{% block sidebar %}
+<a href="/"><i class="icon">🏠</i> Home</a>
+<a href="{{ url_for('conceito') }}"><i class="icon">📚</i> Conceito de Tecnologia</a>
+{% endblock %}
+
+{% block content %}
+<div id="definitionsCarousel" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="carousel-caption">
+                <h5>Conceito etimológico</h5>
+                <h3>Tecnologia vem do grego antigo techne (técnica, arte) e logos (estudo, ato de transformar).</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption">
+                <h5>Dicionário Michaelis</h5>
+                <h5>Tecnologia:</h5>
+                <h3>1. Conjunto de processos, métodos, técnicas e ferramentas relativos à arte, indústria, educação etc.</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption">
+                <h5>Dicionário Michaelis</h5>
+                <h5>Tecnologia:</h5>
+                <h3>2. Conhecimento técnico e científico e suas aplicações a um campo particular.</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption">
+                <h5>Dicionário Michaelis</h5>
+                <h5>Tecnologia:</h5>
+                <h3>3. Tudo o que é novo em matéria de conhecimento técnico e científico.</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption">
+                <h5>Dicionário Michaelis</h5>
+                <h5>Tecnologia:</h5>
+                <h3>4. Linguagem peculiar a um ramo determinado do conhecimento, teórico ou prático.</h3>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-caption">
+                <h5>Dicionário Michaelis</h5>
+                <h5>Tecnologia:</h5>
+                <h3>5. Aplicação dos conhecimentos científicos à produção em geral.</h3>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#definitionsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#definitionsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var myCarousel = document.querySelector('#definitionsCarousel');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: false,  // Não avança os slides automaticamente
+                ride: false       // Não inicia automaticamente ao carregar a página
+            });
+        });
+        </script>
+        
+</div>
+{% endblock %}

@@ -1,0 +1,230 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+    background-color: #f0f3f7 !important; /* Usando !important para garantir que esta regra tenha prioridade */
+    color: rgb(6, 14, 20);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem 1rem;
+}
+
+/* Específico para textos dentro da navbar */
+.navbar-brand, .navbar-toggler {
+    color: rgb(10, 8, 8) !important; /* !important para garantir sobreposição de quaisquer outras regras */
+}
+
+body {
+    padding-top: 60px; /* Adiciona espaço no topo do body para não sobrepor o conteúdo pela navbar */
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Tamanho de fonte ajustado para melhor legibilidade */
+    text-align: center;
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Ajustes nos elementos da barra para garantir alinhamento e visibilidade adequados */
+.navbar-toggler {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    font-size: 1.8rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Imagem no lado direito da barra */
+.navbar img {
+    max-height: 40px;
+}
+
+/* Link styles */
+#menu a {
+    color: #FFF; /* Texto branco para links */
+    padding: 10px;
+    text-decoration: none; /* Sem sublinhado */
+    display: block;
+}
+
+#menu a:hover {
+    background-color: #0056b3; /* Mudança de cor de fundo ao passar o mouse */
+    text-decoration: none; /* Sem sublinhado ao passar o mouse */
+}
+
+/* CSS para o Carrossel */
+
+.carousel {
+    margin: auto; /* Centraliza o carrossel na página */
+}
+
+.carousel-inner {
+    position: relative;
+}
+
+.carousel-item {
+    height: auto; /* Ajusta a altura automaticamente ao conteúdo */
+    min-height: 500px; /* Altura mínima para garantir visibilidade */
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    left: 15%; /* Ajuste de acordo com sua necessidade */
+    right: 15%; /* Ajuste de acordo com sua necessidade */
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 100%;  /* Ajusta para ficar logo abaixo do carrossel */
+    transform: translateY(0);  /* Remove ajuste vertical excessivo */
+    z-index: 5;
+}
+
+.carousel-control-prev {
+    left: 50%;  /* Centraliza e ajusta para esquerda */
+    transform: translateX(-120%);  /* Ajuste fino da posição */
+}
+
+.carousel-control-next {
+    left: 50%;  /* Centraliza e ajusta para direita */
+    transform: translateX(100%);  /* Ajuste fino da posição */
+}
+
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* Estilos para a Sidebar */
+#sidebar {
+    position: fixed;
+    top: 60px; /* Ajusta para iniciar logo abaixo da barra superior */
+    left: 0; /* Alinha à esquerda */
+    width: 300px; /* Largura fixa para a sidebar */
+    height: calc(100% - 60px); /* Calcula a altura correta subtraindo a altura da barra superior */
+    background-color: #333; /* Cor de fundo da sidebar */
+    transition: transform 250ms ease-in-out;
+    z-index: 2000; /* Garante que esteja acima da maioria dos outros conteúdos, mas abaixo da navbar */
+    transform: translateX(-300px); /* Começa escondida */
+}
+
+#sidebar.open {
+    transform: translateX(0px); /* Desloca para a direita para aparecer */
+}
+
+#hamburger {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 3100;  /* Assegura que está sobre a navbar e a sidebar */
+}
+
+#hamburger.open {
+    color: white;
+}
+
+#menu {
+    padding: 80px 10px;
+}
+
+#menu a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+main {
+    transition: margin-left 250ms ease-in-out;
+}
+
+main.shifted {
+    margin-left: 300px; /* Espaço para o conteúdo principal quando a sidebar aparece */
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+/* Estilos específicos para a página História */
+.history-content {
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    text-align: justify; /* Justifica o texto */
+    background-color: #f8f9fa; /* Cor de fundo geral */
+    padding: 20px; /* Espaçamento interno para todo o conteúdo */
+}
+
+.history-content p {
+    padding: 10px; /* Espaçamento interno para cada parágrafo */
+    margin-bottom: 20px; /* Aumenta o espaçamento entre parágrafos */
+    background-color: #ffffff; /* Cor de fundo para parágrafos ímpares */
+}
+
+.history-content p:nth-child(odd) {
+    background-color: #e9ecef; /* Cor de fundo alternada para parágrafos pares */
+}
+
+#menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#menu a:hover {
+    background-color: #0056b3; /* Altere para se adequar ao seu esquema de cores */
+}
+
+#menu i {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.home-background {
+
+    background-image: url('/static/images/2ESTUDO.jpg'); /* Caminho para a imagem de fundo */
+    background-size: contain; /* Mantém toda a imagem visível */
+    background-position: top center; /* Centraliza a imagem no topo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    min-height: calc(100vh - 60px); /* Altura mínima descontando a altura da barra superior */
+    margin-top: 60px; /* Desloca o conteúdo principal para começar abaixo da barra superior */
+}
+
+.biblical-quote {
+    margin-top: 500px; /* Aumenta a margem superior para criar uma distância considerável */
+    text-align: center; /* Centraliza o texto para melhor apresentação */
+    padding: 20px; /* Adiciona padding para mais espaço em torno do texto */
+    background-color: #f0f0f0; /* Adiciona um fundo claro para destaque */
+    border: 1px solid #ccc; /* Adiciona uma borda sutil */
+}
